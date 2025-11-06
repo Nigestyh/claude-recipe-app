@@ -1,14 +1,14 @@
 function Main() {
   return (
     <main>
-      <form>
+      <form className="input-ingredient">
         <input
           type="text"
           name="ingredient"
           placeholder="e.g. lettuce"
           aria-label="add ingredient"
         />
-        <button>Add ingredient</button>
+        <button> + Add ingredient</button>
       </form>
     </main>
   );
