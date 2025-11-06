@@ -76,7 +76,7 @@ main {
   align-items: center;
   border-radius: 8px;
   padding: 10px 40px;
-  margin: 0 40px 0;
+  margin: 0 40px 40px;
 }
 .recipe-prompt h3 {
   font-size: 18px;
@@ -107,4 +107,22 @@ main {
 .get-recipe-button:active {
   transform: scale(0.98);
   background-color: #d37b5d;
+}
+.suggested-recipe-container {
+  padding-left: 43px;
+}
+.suggested-recipe-container h2 {
+  font-size: 30px;
+  font-weight: 580;
+  line-height: 36px;
+  margin-bottom: 18px;
+}
+.suggested-recipe {
+  font-size: 18px;
+  line-height: 27px;
+  color: #475467;
+}
+.suggested-recipe-container ul li,
+.suggested-recipe-container ol li {
+  margin-bottom: 7px;
 }

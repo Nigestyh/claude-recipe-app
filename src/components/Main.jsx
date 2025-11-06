@@ -53,9 +53,9 @@ function Main() {
         </section>
       )}
       {recipeShown && (
-        <section>
+        <section className="suggested-recipe-container">
           <h2>Chef Claude Recommends: </h2>
-          <article>
+          <article className="suggested-recipe">
             <p>
               Based on the ingredients you have available, I would recommend
               making a simple a delicious
