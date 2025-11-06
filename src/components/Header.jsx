@@ -3,7 +3,7 @@ import chefClaudeLogo from "../assets/chef-claude.png";
 function Header() {
   return (
     <header>
-      <img src={chefClaudeLogo} />
+      <img src={chefClaudeLogo} className="chef-claude-logo" />
       <h1>Chef Claude</h1>
     </header>
   );
