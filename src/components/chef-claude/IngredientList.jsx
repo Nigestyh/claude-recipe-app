@@ -6,7 +6,7 @@ function IngredientList(props) {
     <>
       <section className="ingredient-section">
         <h2>Ingredients on hand:</h2>
-        <ul>{ingredientList}</ul>
+        <ul aria-live="polite">{ingredientList}</ul>
       </section>
 
       {props.ingredients.length > 3 && (
