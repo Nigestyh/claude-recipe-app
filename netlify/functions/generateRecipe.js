@@ -9,7 +9,7 @@ export async function handler(event) {
     const ingredientsString = ingredients.join(", ");
 
     const response = await hf.chatCompletion({
-      model: "mistralai/Mistral-7B-Instruct-v0.3",
+      model: "google/gemma-2-2b-it",
       messages: [
         {
           role: "system",
