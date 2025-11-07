@@ -1,14 +1,16 @@
 import { useState } from "react";
 import IngredientList from "./chef-claude/IngredientList";
 import ClaudeRecipe from "./chef-claude/ClaudeRecipe";
+import getRecipeFromIngredients from "../api/fetchRecipe";
 
 function Main() {
   const [ingredients, setIngredients] = useState([]);
 
-  const [recipeShown, setRecipeShown] = useState(false);
+  const [recipe, setRecipe] = useState("");
 
-  function toggleRecipeShown() {
-    setRecipeShown((prevShown) => !prevShown);
+  async function fetchSuggestedRecipe() {
+    const suggestedRecipe = await getRecipeFromIngredients(ingredients);
+    setRecipe(suggestedRecipe);
   }
 
   function addIngredients(formData) {
@@ -30,11 +32,11 @@ function Main() {
       {ingredients.length > 0 && (
         <IngredientList
           ingredients={ingredients}
-          toggleRecipe={toggleRecipeShown}
+          getRecipe={fetchSuggestedRecipe}
         />
       )}
 
-      {recipeShown && <ClaudeRecipe />}
+      {recipe && <ClaudeRecipe recipe={recipe} />}
     </main>
   );
 }
